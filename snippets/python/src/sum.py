@@ -7,4 +7,6 @@ def sum(n: int) -> int:
     index += 1
   return total
 
-print(sum(-10))
+print(sum(10))
+print(sum(100))
+print(sum(1))
