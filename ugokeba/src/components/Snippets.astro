@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+
+const collectionName = "snippets";
+const journals = (await getCollection(collectionName)).sort((a, b) => {
+  return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+});
+---
+<ul class="posts">
+  {
+    journals.map((post) => (
+      <li>
+        <p class = "date">{post.data.pubDate.toDateString()}</p>
+        <p class="title">
+          <a href={`/${collectionName}/${post.slug}/`}>{post.data.title}</a>
+        </p>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul.posts li {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  ul.posts li p.date {
+    margin: 0;
+    font-size: var(--font-size-sm);
+  }
+
+  ul.posts li p.title {
+    margin-top: 5px;
+    font-size: var(--font-size-base);
+  }
+</style>

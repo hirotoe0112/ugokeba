@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=New+Tegomin&display=swap"
+			rel="stylesheet"
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<title>動けばいい。</title>
+	</head>
+	<body>
+		<header>
+			<h1><a href="/">動けばいい。</a></h1>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer>
+			<div class="copyright">
+				© 2025 - <a href="https://greenry.jp" target="_blank"
+					>Mikasuzu Portal</a
+				>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style>
+	/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+	html,
+	body,
+	div,
+	span,
+	object,
+	iframe,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	blockquote,
+	pre,
+	abbr,
+	address,
+	cite,
+	code,
+	del,
+	dfn,
+	em,
+	img,
+	ins,
+	kbd,
+	q,
+	samp,
+	small,
+	strong,
+	sub,
+	sup,
+	var,
+	b,
+	i,
+	dl,
+	dt,
+	dd,
+	ol,
+	ul,
+	li,
+	fieldset,
+	form,
+	label,
+	legend,
+	table,
+	caption,
+	tbody,
+	tfoot,
+	thead,
+	tr,
+	th,
+	td,
+	article,
+	aside,
+	canvas,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	menu,
+	nav,
+	section,
+	summary,
+	time,
+	mark,
+	audio,
+	video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+
+	body {
+		line-height: 1;
+	}
+
+	article,
+	aside,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	menu,
+	nav,
+	section {
+		display: block;
+	}
+
+	nav ul {
+		list-style: none;
+	}
+
+	blockquote,
+	q {
+		quotes: none;
+	}
+
+	blockquote:before,
+	blockquote:after,
+	q:before,
+	q:after {
+		content: "";
+		content: none;
+	}
+
+	a {
+		margin: 0;
+		padding: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+
+	/* change colours to suit your needs */
+	ins {
+		background-color: #ff9;
+		color: #000;
+		text-decoration: none;
+	}
+
+	/* change colours to suit your needs */
+	mark {
+		background-color: #ff9;
+		color: #000;
+		font-style: italic;
+		font-weight: bold;
+	}
+
+	del {
+		text-decoration: line-through;
+	}
+
+	abbr[title],
+	dfn[title] {
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	/* change border colour to suit your needs */
+	hr {
+		display: block;
+		height: 1px;
+		border: 0;
+		border-top: 1px solid #cccccc;
+		margin: 1em 0;
+		padding: 0;
+	}
+
+	input,
+	select {
+		vertical-align: middle;
+	}
+
+	:root {
+		--font-size-sm: clamp(0.7rem, 0.2vw + 0.7rem, 0.9rem);
+		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+
+		--color-text: hsl(0, 0%, 20%);
+		--color-bg: hsl(336, 77%, 94%);
+		--color-callout: hsl(169, 46%, 69%);
+	}
+
+	html {
+		font-size: var(--font-size-base);
+		color: var(--color-text);
+		background-color: var(--color-bg);
+	}
+
+	body {
+		margin: auto;
+		padding: 1em;
+		max-width: 80ch;
+	}
+
+	header h1 {
+		font-size: var(--font-size-lg);
+		font-family: "New Tegomin", serif;
+		font-weight: normal;
+		margin-bottom: 5px;
+	}
+
+	header h1 a {
+		color: var(--color-text);
+		text-decoration: none;
+	}
+
+	header .description {
+		font-size: 1em;
+	}
+
+	main {
+		margin-top: 60px;
+	}
+
+	footer {
+		margin-top: 80px;
+		margin-bottom: 50px;
+		text-align: center;
+	}
+
+	div.copyright {
+		margin-top: 30px;
+	}
+
+	:global(a) {
+		color: var(--color-text);
+	}
+
+	:global(a:hover) {
+		color: var(--color-callout);
+	}
+
+	:global(h1) {
+		font-size: var(--font-size-lg);
+		font-weight: bold;
+	}
+
+	:global(h2) {
+		font-size: var(--font-size-base);
+		font-weight: bold;
+		padding-bottom: 3px;
+		border-bottom: 3px dotted var(--color-callout);
+	}
+
+	:global(code) {
+		font-family: "Cutive Mono", monospace;
+	}
+
+	:global(pre) {
+		padding: 20px;
+	}
+</style>

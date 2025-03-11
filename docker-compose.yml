@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  ugokeba:
+    container_name: ugokeba
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./ugokeba:/usr/src
+    tty: true
+    ports:
+      - 4321:4321

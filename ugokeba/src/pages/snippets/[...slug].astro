@@ -1,0 +1,35 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+
+export const getStaticPaths = (async () => {
+  const snippets = await getCollection("snippets");
+  return snippets.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Layout>
+  <div id="date">{post.data.pubDate.toDateString()}</div>
+  <h1>{post.data.title}</h1>
+  <Content />
+</Layout>
+
+<style>
+  h1 {
+    margin: 5px 0;
+    font-size: var(--font-size-base);
+    font-weight: bold;
+  }
+
+  div#date {
+    margin: 0;
+    font-size: var(--font-size-sm);
+  }
+
+</style>
