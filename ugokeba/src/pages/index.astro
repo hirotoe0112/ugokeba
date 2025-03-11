@@ -1,22 +1,10 @@
 ---
+import About from '../components/About.astro';
 import Snippets from '../components/Snippets.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<div id="callout">
-		（注）このサイトに実用性はありません。
-	</div>
+	<About />
 	<Snippets />
 </Layout>
-
-<style>
-	div#callout {
-		background-color: var(--color-callout);
-		color: var(--color-bg);
-		padding: 10px 0;
-		text-align: center;
-		border-radius: 50px;
-		margin-bottom: 50px;
-	}
-</style>

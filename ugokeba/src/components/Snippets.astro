@@ -6,6 +6,7 @@ const journals = (await getCollection(collectionName)).sort((a, b) => {
   return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
 });
 ---
+<h2>プログラム一覧</h2>
 <ul class="posts">
   {
     journals.map((post) => (
