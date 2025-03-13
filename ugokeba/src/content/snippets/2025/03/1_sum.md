@@ -5,7 +5,7 @@ index: 1
 slug: 1-sum
 ---
 
-## Instructions
+## Specification
 1から指定した数までを合計する関数を作成すること。
 
 ## Implementation

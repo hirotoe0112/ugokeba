@@ -5,7 +5,7 @@ index: 4
 slug: 4-divide
 ---
 
-## Instructions
+## Specification
 割り切れるかどうかを返します。
 
 ## Implementation

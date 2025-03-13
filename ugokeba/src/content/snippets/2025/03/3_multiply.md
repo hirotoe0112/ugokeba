@@ -5,7 +5,7 @@ index: 3
 slug: 3-multiply
 ---
 
-## Instructions
+## Specification
 指定された2つの数を掛け算します。
 
 ## Implementation

@@ -5,7 +5,7 @@ index: 2
 slug: 2-is-same-digits
 ---
 
-## Instructions
+## Specification
 3桁の数値を引数として取り、その数値がゾロ目かどうかを判定する関数を作成すること。
 
 ## Implementation
