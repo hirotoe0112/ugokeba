@@ -1,7 +1,8 @@
 ---
 pubDate: 2025-03-11
 title: 1から指定した数までの合計を計算する
-slug: 2025-03-11-sum
+index: 1
+slug: 1-sum
 ---
 
 ## Instructions
@@ -17,8 +18,6 @@ def sum(n: int) -> int:
     total += n * (index + 1)
     index += 1
   return total
-
-print(sum(10))
 ```
 
 ## How to Run

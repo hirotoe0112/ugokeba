@@ -15,7 +15,7 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 <Layout>
-  <div id="date">{post.data.pubDate.toDateString()}</div>
+  <div id="no">No. {post.data.index}</div>
   <h1>{post.data.title}</h1>
   <Content />
 </Layout>
@@ -27,7 +27,7 @@ const { Content } = await render(post);
     font-weight: bold;
   }
 
-  div#date {
+  div#no {
     margin: 0;
     font-size: var(--font-size-sm);
   }

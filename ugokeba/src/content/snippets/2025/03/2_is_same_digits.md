@@ -1,7 +1,8 @@
 ---
 pubDate: 2025-03-12
 title: 3桁の数がゾロ目かどうか判定する
-slug: 2025-03-12-is-same-digits
+index: 2
+slug: 2-is-same-digits
 ---
 
 ## Instructions
@@ -11,8 +12,6 @@ slug: 2025-03-12-is-same-digits
 ```python: is_same_digits.py
 def is_same_digits(n: int) -> bool:
   return (n / 37) % 3 == 0 and n % 37 == 0
-
-print(is_same_digits(111))
 ```
 
 ## How to Run

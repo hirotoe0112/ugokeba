@@ -4,6 +4,7 @@ const snippetsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     pubDate: z.date(),
+    index: z.number(),
   }),
 });
 

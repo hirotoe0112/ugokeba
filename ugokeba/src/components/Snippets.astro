@@ -11,7 +11,7 @@ const journals = (await getCollection(collectionName)).sort((a, b) => {
   {
     journals.map((post) => (
       <li>
-        <p class = "date">{post.data.pubDate.toDateString()}</p>
+        <p class = "no">No. {post.data.index}</p>
         <p class="title">
           <a href={`/${collectionName}/${post.slug}/`}>{post.data.title}</a>
         </p>
@@ -32,7 +32,7 @@ const journals = (await getCollection(collectionName)).sort((a, b) => {
     margin-bottom: 10px;
   }
 
-  ul.posts li p.date {
+  ul.posts li p.no {
     margin: 0;
     font-size: var(--font-size-sm);
   }
